@@ -2,7 +2,9 @@ defmodule GlApi.Web.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", GlApi.Web.RoomChannel
+  # channel "room:goodlook", GlApi.Web.RequestChannel
+
+  channel "request:lobby", GlApi.RequestChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -19,7 +21,9 @@ defmodule GlApi.Web.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
-  def connect(_params, socket) do
+  def connect(params, socket) do
+    IO.inspect params
+    IO.inspect socket
     {:ok, socket}
   end
 

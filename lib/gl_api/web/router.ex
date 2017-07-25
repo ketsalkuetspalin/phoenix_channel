@@ -19,6 +19,10 @@ defmodule GlApi.Web.Router do
     get "/", PageController, :index
   end
 
+  scope "/admin" do
+    resources "/service", GlApi.GoodlookController
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", GlApi.Web do
   #   pipe_through :api

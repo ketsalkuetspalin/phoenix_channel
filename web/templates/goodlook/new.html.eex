@@ -1,0 +1,6 @@
+<h2>New goodlook</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: goodlook_path(@conn, :create) %>
+
+<span><%= link "Back", to: goodlook_path(@conn, :index) %></span>

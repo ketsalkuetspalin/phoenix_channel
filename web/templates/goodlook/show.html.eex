@@ -1,0 +1,18 @@
+<h2>Show goodlook</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @goodlook.name %>
+  </li>
+
+  <li>
+    <strong>Status:</strong>
+    <%= @goodlook.status %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: goodlook_path(@conn, :edit, @goodlook) %></span>
+<span><%= link "Back", to: goodlook_path(@conn, :index) %></span>
